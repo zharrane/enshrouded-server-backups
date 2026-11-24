@@ -1,0 +1,6 @@
+#!/bin/bash
+# Replaces the image's enshrouded-updater, which updated the game on every
+# container start. Updates are switched off: this only starts the server.
+. "$(dirname "$0")/common"
+info "Updates are off - starting the server without checking Steam"
+supervisorctl start enshrouded-server

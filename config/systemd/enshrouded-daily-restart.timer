@@ -1,0 +1,7 @@
+[Unit]
+Description=Restart Enshrouded v2 every day at 06:00 Algeria time
+[Timer]
+OnCalendar=*-*-* 06:00:00 Africa/Algiers
+Persistent=false
+[Install]
+WantedBy=timers.target

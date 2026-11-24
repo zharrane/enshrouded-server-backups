@@ -1,0 +1,5 @@
+[Unit]
+Description=Daily restart of Enshrouded v2 game server
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/docker restart -t 120 enshrouded-v2
