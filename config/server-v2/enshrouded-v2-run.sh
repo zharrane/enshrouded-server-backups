@@ -6,7 +6,7 @@ set -e
 # Stop gracefully first (up to 120 s) so the game saves the world before removal.
 docker stop enshrouded-v2 >/dev/null 2>&1 || true
 docker rm enshrouded-v2 >/dev/null 2>&1 || true
-docker run -d --name enshrouded-v2 --restart unless-stopped --stop-timeout 120 --network host \
+docker run -d --name enshrouded-v2 --restart always --stop-timeout 120 --network host \
   -v /opt/enshrouded-v2:/opt/enshrouded \
   -v /root/enshrouded-v2-updater-off:/usr/local/etc/enshrouded/enshrouded-updater:ro \
   --env-file /root/enshrouded-v2.env \
